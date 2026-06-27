@@ -77,14 +77,6 @@ Replaces the pre-computed `det.txt` detections with a live, lightweight **YOLOv8
 | TP4 | + OSNet ReID, cosine similarity |
 | TP5 | + YOLOv8n real-time detector |
 
-## Implementation Notes
-
-- **TP1**: the Kalman state must be a column vector (`shape (4,1)`), not a flat array — a common source of broadcasting bugs.
-- **TP2**: track management is sensitive to the similarity threshold and `max_missed_frames`; values had to be relaxed (threshold `0.7 → 0.3`, missed frames `2 → 10`) to avoid constantly spawning new IDs.
-- **TP3**: ID switches still occur when a box's size changes quickly, due to imperfect Kalman prediction; box dimensions are therefore updated conservatively to keep IDs stable.
-- **TP4**: the `α`/`β` weighting and the ReID confidence threshold required manual tuning; the ONNX preprocessing pipeline (resize, normalization, channel order) needed to match the OSNet training setup exactly.
-- **TP5**: the bonus MOT-metric evaluation (`seqmap`-based) could not be completed due to file-path/format issues with the evaluation toolkit.
-
 ## Results
 
 Each exercise's output video is available on the project's Git repository on the folder `Video_Result`
