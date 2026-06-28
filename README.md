@@ -2,6 +2,10 @@
 
 A progressive series of 5 exercises : starting from a single-object Kalman tracker, then adding IoU-based multi-object tracking, Kalman-guided prediction, appearance re-identification (ReID), and finally a real-time deep-learning detector.
 
+<p align="center">
+  <img src="./assets/Result_TP5.gif" alt="TP5 Result Video"">
+</p>
+
 ## TP1 — Single Object Tracking (Kalman Filter)
 
 A centroid tracker for one object, using a constant-velocity Kalman filter on the state `x = [cx, cy, vx, vy]ᵀ` (centroid position + velocity).
@@ -50,6 +54,10 @@ The flow per frame is :
 3. Solve the assignment with the Hungarian algorithm.
 4. Update each matched track's Kalman filter with the new detection.
 5. Run track management (same 3 cases as TP2).
+
+<p align="center">
+  <img src="./assets/Result_TP5.gif" width="50%"">
+</p>
 
 ## TP4 — Appearance-Aware (ReID) Tracking
 
