@@ -4,6 +4,8 @@ A progressive series of 5 exercises : starting from a single-object Kalman track
 
 <p align="center">
   <img src="./assets/Result_TP5.gif" alt="TP5 Result Video"">
+  <br>
+  <em>TP5 Video Result</em>
 </p>
 
 ## TP1 — Single Object Tracking (Kalman Filter)
@@ -56,7 +58,7 @@ The flow per frame is :
 5. Run track management (same 3 cases as TP2).
 
 <p align="center">
-  <img src="./assets/Result_TP5.gif" width="50%"">
+  <img src="./assets/tp3.png" width="50%"">
 </p>
 
 ## TP4 — Appearance-Aware (ReID) Tracking
